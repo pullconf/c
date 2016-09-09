@@ -17,3 +17,6 @@ systemctl restart dnsmasq
 ## Setup APT
 cp -vf $DIR/etc/apt/sources.list /etc/apt/sources.list
 apt-get update
+
+## Setup Tor
+cp -vf $DIR/etc/apt/sources.list.d/xenial-torproject.list
