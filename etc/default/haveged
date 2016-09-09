@@ -1,0 +1,2 @@
+# Start running when entropy drops below 2048 bits
+DAEMON_ARGS="-w 2048"
