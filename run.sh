@@ -18,7 +18,7 @@ else
     cp -vf $DIR/etc/default/haveged /etc/default/haveged
 fi
 
-## Install dnsmasq
+## Setup dnsmasq
 apt-get install -y dnsmasq
 cp -vf $DIR/etc/dnsmasq.conf /etc/dnsmasq.conf
 cp -vf $DIR/etc/default/dnsmasq /etc/default/dnsmasq
@@ -37,10 +37,19 @@ apt-get update
 apt-get install -y deb.torproject.org-keyring tor
 cp -vf $DIR/etc/tor/torrc /etc/tor/torrc
 
-## IPTables
-apt-get install iptables iptables-persistent
+## Setup iptables
+apt-get install -y iptables iptables-persistent
 cp -vf $DIR/etc/iptables/rules.v4 /etc/iptables/rules.v4
 cp -vf $DIR/etc/iptables/rules.v6 /etc/iptables/rules.v6
 iptables-restore < /etc/iptables/rules.v4
 ip6tables-restore < /etc/iptables/rules.v6
 
+## Setup BASH Env
+cp -vf $DIR/home/bash_aliases ~/.bash_aliases
+sed -s 's/#force_color_prompt/force_color_prompt/g' -i ~/.bashrc  # works
+
+## Setup LXC
+apt-get install -y software-properties-common
+add-apt-repository -y --enable-source ppa:ubuntu-lxc/stable --keyserver="hkp://keyserver.ubuntu.com:80/"
+apt update
+apt-get install -y lxc lxc1 lxc-dev lxc-templates lxctl lxcfs lxc-tests
