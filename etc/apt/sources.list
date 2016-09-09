@@ -1,0 +1,19 @@
+# xenial
+deb http://mirrors.digitalocean.com/ubuntu xenial main restricted universe multiverse
+deb-src http://mirrors.digitalocean.com/ubuntu xenial main restricted universe multiverse
+ 
+# xenial-updates
+deb http://mirrors.digitalocean.com/ubuntu xenial-updates main restricted universe multiverse
+deb-src http://mirrors.digitalocean.com/ubuntu xenial-updates main restricted universe multiverse
+ 
+# xenial-backports
+deb http://mirrors.digitalocean.com/ubuntu xenial-backports main restricted universe multiverse
+deb-src http://mirrors.digitalocean.com/ubuntu xenial-backports main restricted universe multiverse
+ 
+# xenial-security
+deb http://security.ubuntu.com/ubuntu xenial-security main restricted universe multiverse
+deb-src http://security.ubuntu.com/ubuntu xenial-security main restricted universe multiverse
+ 
+# ubuntu partner
+deb http://archive.canonical.com/ubuntu xenial partner
+deb-src http://archive.canonical.com/ubuntu xenial partner
