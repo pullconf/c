@@ -1,0 +1,2 @@
+SocksPort 0
+SocksPolicy reject *
